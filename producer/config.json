@@ -1,0 +1,4 @@
+{
+    "LOCAL-HOST":"localhost",
+    "DOCKER-HOST":"host.docker.internal"
+}
