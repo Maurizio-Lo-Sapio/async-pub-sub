@@ -26,7 +26,6 @@ Note: an application connecting to RabbitMQ from another container, shall use ho
 To generally build and run an image:
 
 ```
-
 docker build -t ubuntu .
 winpty docker run -t -i -v C:\\Users\\Utente\\Documents:/data ubuntu# async-pub-sub
 ```
