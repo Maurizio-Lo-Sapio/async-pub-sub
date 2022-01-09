@@ -38,13 +38,16 @@ def index():
         if request.form.get('action1') == 'Good morning':
             greetings.greetings = "Good morning"
             publish_message(greetings.SerializeToString())
-        elif  request.form.get('action2') == 'Good evening':
+        elif request.form.get('action2') == 'Good evening':
             greetings.greetings = "Good evening"
+            publish_message(greetings.SerializeToString())
+        elif request.form.get('load-csv') == 'Load csv':
+            uploaded_file = request.files['file']
+            greetings.greetings = f'Uploaded: {uploaded_file.filename}'
             publish_message(greetings.SerializeToString())
         else:
             pass # unknown
     elif request.method == 'GET':
-        return render_template('index.html')
+        pass
     
     return render_template("index.html")
-
